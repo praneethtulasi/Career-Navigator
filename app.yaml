@@ -1,0 +1,12 @@
+runtime: python310  # Specify the correct Python version for your app
+
+entrypoint: gunicorn -b :$PORT app:app  # Use Gunicorn to serve your app
+
+env_variables:
+  FLASK_ENV: 'production'  # Set environment to production for optimized performance
+
+instance_class: F2  # Use F2 as the default instance class (F4 is optional, F2 should suffice for most small apps)
+
+automatic_scaling:
+  min_instances: 1  # Minimum number of instances to always keep running
+  max_instances: 5  # Maximum number of instances to allow; can scale based on traffic
