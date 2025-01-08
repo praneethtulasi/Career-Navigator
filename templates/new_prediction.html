@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Career</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+<body>
+    <div id="wrapper">
+    <div class="homewrapper">
+        <div class="title-text">
+            <div class="title login">
+               <h1> Career Navigator </h1>
+            </div>
+        </div>    
+        <br/>
+    <div class="form-container">
+    <div class="form-inner">        
+    <form action="/predict" method="post" class="login">
+        <label>Logical quotient rating (1-10):</label>
+        <input type="range" min="0" max="10" value="5" step="1"name="logical_quotient" required>
+        <br><br>
+        
+        <label>Coding skills rating (1-10):</label>
+        <input type="range" min="0" max="10" value="5" step="1"name="coding_skills" required><br><br>
+        
+        <label>Hackathons (0-10):</label>
+        <input type="range" min="0" max="10" value="5" step="1"name="hackathons" required>
+        <br><br>
+        
+        <label>Public speaking points (1-10):</label>
+        <input type="range" min="0" max="10" value="5" step="1"name="public_speaking" required>
+        <br><br>
+        
+        <label>Self-learning capability? :</label>
+        <select name="self_learning" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select><br><br>
+        
+        <label>Extra-courses did :</label>
+        <select name="extra_courses" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select><br><br> 
+        
+        <label>Taken inputs from seniors or elders :</label>
+        <select name="seniors_inputs" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select><br><br>
+
+        <label>Worked in teams ever? :</label>
+        <select name="team_work" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select><br><br>
+        
+        <label>Introvert :</label>
+        <select name="introvert" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select><br><br>
+        
+        <label>Reading and writing skills :</label>
+        <select name="reading_writing" required>
+            <option value="0">Poor</option>
+            <option value="1">Medium</option>
+            <option value="2">Excellent</option>
+        </select><br><br>
+    
+        
+        <label>Memory capability score :</label>
+        <select name="memory_capability" required>
+            <option value="0">Poor</option>
+            <option value="1">Medium</option>
+            <option value="2">Excellent</option>
+        </select><br><br>    
+        
+        <label>Hard worker :</label>
+        <select name="hard_worker" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select><br><br>
+        
+        
+        <label>Management :</label>
+        <select name="management" required>
+            <option value="1">Management</option>
+            <option value="0">Technical</option>
+        </select><br><br>
+
+        
+        <label>Interested subjects:</label>
+        <select name="interested_subjects" required>
+            <option value="3">Software Engineering</option>
+            <option value="6">IOT</option>
+            <option value="0">Cloud Computing</option>
+            <option value="9">Programming</option>
+            <option value="4">Networks</option>
+            <option value="10">Computer Architecture</option>
+            <option value="7">Data Engineering</option>
+            <option value="5">Hacking</option>
+            <option value="11">Management</option>
+            <option value="8">Parallel Computing</option>
+            <option value="1">Developer</option>
+            <option value="2">Security</option>
+            <option value="12">Others</option>
+        </select><br><br>
+        <label>if others, please specify:</label>
+        <input type="text"><br><br>
+        
+        <label>Interested Shows/Books</label>
+        <select name="interested_books" required>
+            <option value="0">Math</option>
+            <option value="1">Action/Adventures</option>
+            <option value="2">History</option>
+            <option value="3">Guide</option>
+            <option value="4">Comics</option>
+            <option value="5">Travel</option>
+            <option value="6">Biographies</option>
+            <option value="7">Self help</option>
+            <option value="8">Series</option>
+            <option value="9">Science</option>
+            <option value="10">Health</option>
+            <option value="11">Journal</option>
+            <option value="12">Fiction</option>
+            <option value="13">Children</option>
+            <option value="15">Horror</option>
+            <option value="16">Poetry</option>
+            <option value="17">Litratures</option>
+            <option value="18">Cooking</option>
+            <option value="19">Fantasy</option>
+            <option value="20">Drama</option>
+            <option value="21">Art</option>
+            <option value="22">Mystery</option>
+            </select><br><br>
+        
+
+        <label>Certifications </label>
+        <select name="certifications" required>
+            <option value="0">Information Security</option>
+            <option value="1">Full Stack</option>
+            <option value="2">App Development</option>
+            <option value="3">Data Science</option>
+            <option value="4">AI Engineering</option>
+            <option value="5">Robotics Engineering</option>
+            <option value="6">AR/VR Development</option>
+            <option value="7">Product Management Professional</option>
+            <option value="8">DevOOPS Engineer</option>
+            <option value="9">Quantum Computing</option>
+            <option value="10">Robotics Process Automation</option>
+            <option value="11">Cybersecurity</option>
+            <option value="12">AI for Health</option>
+            <option value="13">ERP Consultant</option>
+            <option value="14">Blockchain Developer</option>
+            <option value="15">Machine Learning</option>
+            <option value="16">Testing</option>
+            <option value="17">Shell Programming</option>
+            <option value="18">Python</option>
+            <option value="19">Hadoop</option>
+            <option value="20">R Programming</option>
+            <option value="21">Others</option>
+        </select><br><br>
+
+        <label>if others, please specify:</label>
+        <input type="text"><br><br>
+        
+        <label>Workshops </label>
+        <select name="workshops" required>
+            <option value="0">Cloud Computing</option>
+            <option value="1">Database Security</option>
+            <option value="5">System Design</option>
+            <option value="2">Web Techonologies</option>
+            <option value="19">Hacking</option>
+            <option value="14">Testing</option>
+            <option value="15">Data Science</option>
+            <option value="16">Game Development</option>
+            <option value="3">AI</option>
+            <option value="4">Machine Learning</option>
+            <option value="10">AI for Health care</option>
+            <option value="11">ERP Systems</option>
+            <option value="9">Robotics Process Automation (RPA)</option>
+            <option value="12">Block Chain</option>
+            <option value="6">AR/VR Development</option>
+            <option value="8">DevOOPS</option>
+            <option value="7">Product Management</option>
+            <option value="17">Cybersecurity</option>
+            <option value="20">Others</option>
+        </select><br><br>
+        <label>if others, please specify:</label>
+        <input type="text"><br><br>
+        
+        <label>Type of company want to settle in? </label>
+        <select name="company_type" required>
+            <option value="0">Developer</option>
+            <option value="9">Service based</option>
+            <option value="1">Product based</option>
+            <option value="3">Web Services</option>
+            <option value="2">Big Data Companies</option>
+            <option value="19">BPA</option>
+            <option value="13">Testing and Maintainance</option>
+            <option value="10">Finance</option>
+            <option value="18">Cloud Services</option>
+            <option value="16">Product Development</option>
+            <option value="17">SAas Services</option>
+            <option value="7">Security</option>
+            <option value="14">Block Chain</option>
+            <option value="8">AI</option>
+            <option value="4">IOT</option>
+            <option value="5">Data Science</option>
+            <option value="11">System Analysis</option>
+            <option value="12">Cybersecurity</option>
+            <option value="6">Sales and Marketing</option>
+            <option value="15">Software Development</option>
+            <option value="20">Others</option>
+        </select><br><br>
+        <label>if others, please specify:</label>
+        <input type="text"><br><br>
+        
+        <label>Interested career area code:</label>
+        <select name="career_area" required>
+            <option value="0">Cloud Computing</option>
+            <option value="14">Big Data</option>
+            <option value="6">AI</option>
+            <option value="3">AI Research</option>
+            <option value="9">ERP</option>
+            <option value="4">Robotics</option>
+            <option value="5">Block Chain</option>
+            <option value="2">DevOOPS</option>
+            <option value="7">Product Management</option>
+            <option value="10">Software Development</option>
+            <option value="8">Web Development</option>
+            <option value="11">Data Science</option>
+            <option value="12">Cybersecurity</option>
+            <option value="1">Machine Learning</option>
+            <option value="13">IOT</option>
+            <option value="15">System Analysis</option>
+            <option value="16">Quantum Computing</option>
+            <option value="17">Others</option>
+        </select><br><br>
+        <label>if others, please specify:</label>
+        <input type="text"><br><br>
+        
+        <div class="field btn">
+            <div class="btn-layer"></div>
+            <input type="submit" value="Predict">
+         </div>
+          
+    </form>
+    </div>
+    </div>
+    </div>
+    </div>
+</body>
+</html>

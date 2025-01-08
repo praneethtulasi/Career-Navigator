@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Include Mermaid.js -->
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+  </head>
+  <body>
+    <div class="homewrapper">
+       <div class="title-text">
+          <div class="title login">
+            <h1>Congratulations, you are a {{ job_role }} 🎉🎉!</h1>
+             <br/>
+             <h2>Job Description:</h2>
+             <p>&nbsp;&nbsp;&nbsp;&nbsp;{{ description }}</p>
+             <br/>
+             <h2>Responsibilities:</h2>
+              <div>
+                  {% for responsibility in responsibilities %}
+                      &nbsp;&nbsp;&nbsp;&nbsp;{{ responsibility }}<br>
+                  {% endfor %}
+              </div>
+              <br/>
+             <h2>Roadmap:</h2>
+              <div>
+                  <div class="mermaid">
+                      graph TD;
+                      {% for roadmap in roadmap %}
+                          A{{ loop.index }}["{{ roadmap }}"]{% if not loop.last %} --> A{{ loop.index + 1 }}{% endif %};
+                      {% endfor %}
+                  </div>
+              </div>
+              <br/> 
+              <div>
+              <a href="/home">Go to home page</a>
+              </div>
+          </div>
+       </div>
+    </div>
+  </body>
+</html>
